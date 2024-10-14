@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image with Border</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+            height: 100vh;           /* Full viewport height */
+            margin: 0;                /* Remove default margin */
+            background-color: #f0f0f0; /* Light gray background */
+        }
+        .image-container {
+            border: 5px solid black;  /* Black border */
+            padding: 10px;            /* Space between image and border */
+            background-color: white;   /* White background for the border */
+            border-radius: 10px;      /* Rounded corners */
+        }
+        img {
+            display: block;           /* Remove inline spacing */
+            max-width: 100%;         /* Responsive image */
+            height: auto;            /* Maintain aspect ratio */
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <img src="/img/raymazing.jpeg" alt="Centered Image">
+</div>
+
+</body>
+</html>
