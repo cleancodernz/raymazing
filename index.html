@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Centered Image with Border</title>
+    <title>Responsive Image</title>
     <style>
         body {
             display: flex;
@@ -14,22 +14,28 @@
             background-color: #f0f0f0; /* Light gray background */
         }
         .image-container {
-            border: 5px solid black;  /* Black border */
-            padding: 10px;            /* Space between image and border */
-            background-color: white;   /* White background for the border */
-            border-radius: 10px;      /* Rounded corners */
+            padding: 50px;           /* 50 pixels padding around the image */
+            border-radius: 20px;     /* Rounded corners for the image */
+            overflow: hidden;         /* Ensure rounding is visible */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+            max-width: calc(100vw - 100px); /* Maximum width considering padding */
+            max-height: calc(100vh - 100px); /* Maximum height considering padding */
+            width: auto;              /* Auto width for flexible resizing */
+            height: auto;             /* Auto height for flexible resizing */
         }
         img {
-            display: block;           /* Remove inline spacing */
-            max-width: 100%;         /* Responsive image */
+            width: 100%;             /* Make the image width 100% of the container */
             height: auto;            /* Maintain aspect ratio */
+            max-height: calc(100vh - 100px); /* Ensure image doesn't exceed the viewport */
+            object-fit: contain;      /* Maintain aspect ratio, fit within the box */
+            border-radius: 20px;     /* Rounded corners for the image */
         }
     </style>
 </head>
 <body>
 
 <div class="image-container">
-    <img src="/img/raymazing.jpeg" alt="Centered Image">
+    <img src="img/raymazing.jpg" alt="Responsive Centered Image">
 </div>
 
 </body>
